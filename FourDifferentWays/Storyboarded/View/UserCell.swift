@@ -8,6 +8,14 @@
 import UIKit
 
 class UserCell: UITableViewCell, CustomCell {
+    func setupCell(with viewModel: RowViewModel, at index: Int) {
+        guard let viewModel = viewModel as? UserCellViewModel else {
+            return
+        }
+        titleLabel.text = viewModel.titleText
+        trailingLabel.text = viewModel.trailingText
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var trailingLabel: UILabel!
 //    private var viewModel = UserCellViewModel()
