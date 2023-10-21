@@ -10,34 +10,56 @@ import UIKit
 class MenuCell: UITableViewCell, CustomCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var trailingImgView: UIImageView!
-//    private var viewModel: MenuCellViewModel?
+    private var viewModel = MenuCellViewModel()
+//    private var index = 0
     
-    func setupCell(with cellData: MenuData) {
-        titleLabel.text = cellData.name
-        trailingImgView.image = UIImage(named: cellData.picName)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        viewModel.fetchCellData()
     }
     
+//    func setupCell(with cellData: MenuItem) {
+//        titleLabel.text = cellData.name
+//        trailingImgView.image = UIImage(named: cellData.picName)
+//    }
+    
+    
+    
     func setupCell(with viewModel: RowViewModel) {
-        guard let viewModel = viewModel as? MenuCellViewModel else {
-            return
-        }
-////        self.viewModel = viewModel
-//        var cellDatas = [MenuData]()
+//        guard let viewModel = viewModel as? MenuCellViewModel else {
+//            return
+//        }
+   
+//        self.viewModel = viewModel
+
+//        var cellDatas = [MenuItem]()
 //        for cellData in viewModel.cellDatas {
+//            self.titleLabel.text = cellData.name
+//            self.trailingImgView.image = UIImage(named: cellData.picName)
+            
 //            cellDatas.append(cellData)
-////            self.titleLabel.text = cellData.name
-////            self.trailingImgView.image = UIImage(named: cellData.picName)
 //            self.titleLabel.text = cellDatas.first?.name
 //            self.trailingImgView.image = UIImage(named: cellDatas.first!.picName)
 //            cellDatas.removeFirst()
+//            cellDatas.removeLast()
 //        }
-        let tableView = superTableView()
-        guard let indexPath = tableView?.indexPath(for: self) else {
+
+//        let tableView = superTableView()
+//        guard let indexPath = tableView?.indexPath(for: self) else {
+//            return
+//        }
+//        self.titleLabel.text = viewModel.cellDatas[indexPath.row].name
+//        self.trailingImgView.image = UIImage(named: viewModel.cellDatas[indexPath.row].picName)
+    }
+    
+    func setupCell(with viewModel: RowViewModel, at index: Int) {
+        guard let viewModel = viewModel as? MenuCellViewModel else {
             return
         }
-        self.titleLabel.text = viewModel.cellDatas[indexPath.row].name
-        self.trailingImgView.image = UIImage(named: viewModel.cellDatas[indexPath.row].picName)
         
+        let modelItem = viewModel.itemAt(index)
+        titleLabel.text = modelItem.name
+        trailingImgView.image = UIImage(named: modelItem.picName)
     }
 }
 

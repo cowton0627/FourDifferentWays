@@ -1,5 +1,6 @@
 
-    [
+[
+    
       {
         "name" : "摩羯座",
         "picName" : "Capricorn",
@@ -72,6 +73,7 @@
         "fromDate" : "11/22",
         "tillDate" : "12/21"
       }
-    ]
+      
+]
 
 

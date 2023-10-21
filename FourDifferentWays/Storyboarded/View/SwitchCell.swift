@@ -8,6 +8,15 @@
 import UIKit
 
 class SwitchCell: UITableViewCell, CustomCell {
+    func setupCell(with viewModel: RowViewModel, at index: Int) {
+        guard let viewModel = viewModel as? SwitchCellViewModel else {
+            return
+        }
+        titleLabel.text = viewModel.titleText
+        trailingSwitch.isOn = viewModel.isOn
+    }
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var trailingSwitch: UISwitch!
 //    private var viewModel = SwitchCellViewModel()
@@ -22,6 +31,7 @@ class SwitchCell: UITableViewCell, CustomCell {
         }
 //        self.viewModel = viewModel
         titleLabel.text = viewModel.titleText
+        trailingSwitch.isOn = viewModel.isOn
     }
 
 }

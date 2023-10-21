@@ -13,6 +13,7 @@ class SwitchCellViewModel: RowViewModel {
     var sectionTitle: String?
     
     let titleText = "接收每日通知"
+    let isOn = true
 
     
 }
