@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		912D53BC2AF3BB2700DAF912 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912D53BB2AF3BB2700DAF912 /* TestViewController.swift */; };
 		9166C29E2761EA87001F9BE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166C29D2761EA87001F9BE7 /* AppDelegate.swift */; };
 		9166C2A02761EA87001F9BE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166C29F2761EA87001F9BE7 /* SceneDelegate.swift */; };
 		9166C2A22761EA87001F9BE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166C2A12761EA87001F9BE7 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		912D53BB2AF3BB2700DAF912 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		9166C29A2761EA87001F9BE7 /* FourDifferentWays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourDifferentWays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9166C29D2761EA87001F9BE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9166C29F2761EA87001F9BE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		912D53BA2AF3BB0100DAF912 /* AnotherReason */ = {
+			isa = PBXGroup;
+			children = (
+				912D53BB2AF3BB2700DAF912 /* TestViewController.swift */,
+			);
+			path = AnotherReason;
+			sourceTree = "<group>";
+		};
 		9166C2912761EA87001F9BE7 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 				9166C2BA2761F0DF001F9BE7 /* Resource */,
 				9166C2B12761EA97001F9BE7 /* Storyboarded */,
 				91F46A062767520800FC9AA9 /* Coded */,
+				912D53BA2AF3BB0100DAF912 /* AnotherReason */,
 				91F46A59276C86EA00FC9AA9 /* ListController.swift */,
 				91F46A4D276C7CC000FC9AA9 /* Observable.swift */,
 				91F46A3A276B354B00FC9AA9 /* Xib */,
@@ -438,6 +449,7 @@
 				91F46A50276C7FF400FC9AA9 /* FirstCellViewModel.swift in Sources */,
 				9166C2C02761F16D001F9BE7 /* ZodiacData.swift in Sources */,
 				917809442AE22CB900EF520F /* ThirdItem.swift in Sources */,
+				912D53BC2AF3BB2700DAF912 /* TestViewController.swift in Sources */,
 				917809402AE2238200EF520F /* FirstItem.swift in Sources */,
 				9166C2C62762043C001F9BE7 /* ImgCell.swift in Sources */,
 				91F46A37276A038400FC9AA9 /* ThirdCell.swift in Sources */,
